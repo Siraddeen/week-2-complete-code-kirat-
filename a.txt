@@ -1,0 +1,43 @@
+hey everyone
+
+
+const fs = require("fs");
+const express = require("express");
+
+function callbackfn(err, data) {
+  console.log(data);
+}
+fs.readFile("a.txt", "utf-8", callbackfn);
+
+
+
+
+
+
+
+
+
+
+
+function handleFirstRequest(req, res) {
+  console.log(req.headers);
+  var con = req.headers.con;
+  //var coun = req.query.calc; // Retrieve the counter value from query parameters
+  let answ = "the ok sum is " + calSum(con) + " ok mm"; // Use the retrieved counter value
+  console.log(req.query.c2);
+  res.send(` ${answ}`);
+}
+
+
+
+
+// 2) using headers
+function handleFirstRequest(req, res) {
+  //console.log(req.headers);
+  console.log(req.body);
+  var con = req.body.con;
+  //var coun = req.query.calc; // Retrieve the counter value from query parameters
+  let answ = "the ok sum is " + calSum(con) + " ok mm"; // Use the retrieved counter value
+  //console.log(req.query.c2);
+  res.send(` ${answ}`);
+}
