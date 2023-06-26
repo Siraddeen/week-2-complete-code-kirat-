@@ -1,5 +1,6 @@
 const express = require("express");
 var bodyParser = require("body-parser"); // external library to compute body arguments
+const axios = require("axios"); // library used incase fetch didn't respond
 const app = express();
 const port = 3000;
 
